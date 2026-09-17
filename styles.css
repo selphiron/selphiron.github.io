@@ -71,7 +71,7 @@ a:focus-visible {
 
 .home h1 {
   font-family: "Iowan Old Style", Palatino, "Palatino Linotype", "Times New Roman", Times, serif;
-  font-size: clamp(1.55rem, 4.4vw, 2.2rem);
+  font-size: clamp(1.4rem, 4.1vw, 2.1rem);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -104,9 +104,24 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.7rem;
-  margin-top: 0.9rem;
-  font-size: 0.95rem;
+  gap: 1.15rem;
+  margin-top: 1.15rem;
+}
+
+.links a {
+  display: inline-flex;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: var(--fg);
+}
+
+.links svg {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .sep {
