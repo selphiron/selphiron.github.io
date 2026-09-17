@@ -1,0 +1,203 @@
+:root {
+  --bg: #f3f0e8;
+  --fg: #1c1b18;
+  --muted: #5c5850;
+  --line: #d4cfc3;
+  --focus: #1c1b18;
+  --pad: clamp(1.25rem, 5vw, 2.5rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: light;
+  background: var(--bg);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in srgb, currentColor 32%, transparent);
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.home {
+  overflow: hidden;
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.home main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--pad);
+  padding-bottom: 0.5rem;
+}
+
+.home h1 {
+  font-family: "Iowan Old Style", Palatino, "Palatino Linotype", "Times New Roman", Times, serif;
+  font-size: clamp(1.55rem, 4.4vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.firm {
+  margin-top: 0.7rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+
+.topics {
+  margin-top: 2.15rem;
+  max-width: 28rem;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  line-height: 1.55;
+  text-wrap: balance;
+}
+
+.contact {
+  margin-top: 2.15rem;
+  font-size: 0.95rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.sep {
+  color: var(--muted);
+  user-select: none;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 1.25rem var(--pad) max(1.25rem, env(safe-area-inset-bottom));
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.legal {
+  overflow: auto;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.legal-header {
+  width: min(38rem, calc(100% - 2 * var(--pad)));
+  margin: 1.5rem auto 0;
+}
+
+.legal-header a {
+  color: var(--muted);
+  font-size: 0.8125rem;
+  text-decoration: none;
+}
+
+.legal-header a:hover {
+  color: var(--fg);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+}
+
+.legal main {
+  width: min(38rem, calc(100% - 2 * var(--pad)));
+  margin: 0 auto;
+  padding: 2.5rem 0 3.5rem;
+}
+
+.legal h1 {
+  font-family: "Iowan Old Style", Palatino, "Palatino Linotype", "Times New Roman", Times, serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.75rem;
+}
+
+.legal h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 1.75rem 0 0.55rem;
+}
+
+.legal p,
+.legal address,
+.legal ul {
+  color: var(--fg);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 0.85rem;
+}
+
+.legal address {
+  font-style: normal;
+}
+
+.legal ul {
+  padding-left: 1.15rem;
+}
+
+.legal li + li {
+  margin-top: 0.3rem;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+@media (max-height: 520px) {
+  .home {
+    overflow: auto;
+    height: auto;
+    min-height: 100dvh;
+  }
+}
